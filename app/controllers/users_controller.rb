@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    redirect_to root_url
   end
 
   def edit
@@ -35,6 +36,7 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'new'
+      redirect_to root_url
     end
   end
 
