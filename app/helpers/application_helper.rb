@@ -6,7 +6,7 @@ module ApplicationHelper
     if page_title.empty?				#Boolean test
      base_title						#Implicit return
     else
-     "#(base_title) | #(page_title)"			#String interpolation
+     "#{base_title} | #{page_title}"			#String interpolation
     end
    end
 end
