@@ -75,7 +75,10 @@ describe "User pages" do
   describe "following/followers" do
     let(:user) { FactoryGirl.create(:user) }
     let(:other_user) { FactoryGirl.create(:user) }
-    before { user.follow!(other_user) }
+        before do
+          other_user.follow!(user)
+          visit root_path
+        end
 
     describe "followed users" do
       before do
